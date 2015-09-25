@@ -96,7 +96,6 @@ table {
   width: 100%;
   height: 100%;
   z-index: 1;
-  top: -50%;
 }
 #sequence > .sequence-canvas > li img {
   height: 96%;

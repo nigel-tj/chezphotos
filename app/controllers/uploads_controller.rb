@@ -2,24 +2,29 @@ class UploadsController < ApplicationController
   before_action :authenticate_admin!
   before_action :set_upload, only: [:show, :edit, :update, :destroy]
 
+
   # GET /uploads
   # GET /uploads.json
   def index
     @uploads = Upload.all
+    render :layout => 'admin'
   end
 
   # GET /uploads/1
   # GET /uploads/1.json
   def show
+      render :layout => 'admin'
   end
 
   # GET /uploads/new
   def new
     @upload = Upload.new
+    render :layout => 'admin'
   end
 
   # GET /uploads/1/edit
   def edit
+    render :layout => 'admin'
   end
 
   # POST /uploads
@@ -50,6 +55,7 @@ class UploadsController < ApplicationController
         format.json { render json: @upload.errors, status: :unprocessable_entity }
       end
     end
+    render :layout => 'admin'
   end
 
   # DELETE /uploads/1
@@ -60,6 +66,7 @@ class UploadsController < ApplicationController
       format.html { redirect_to uploads_url, notice: 'Upload was successfully destroyed.' }
       format.json { head :no_content }
     end
+
   end
 
   private

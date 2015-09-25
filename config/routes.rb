@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  match 'new_upload' => 'uploads#new', :via => :get
+  match 'uploads' => 'uploads#index', :via => :get
+  match 'admins' => 'uploads#index', :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
