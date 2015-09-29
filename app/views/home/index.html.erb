@@ -1,11 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="sequence-theme">
-      <div id="sequence">
-        
-        <img class="sequence-prev" src="images/bt-prev.png" alt="Previous Frame" />
-        <img class="sequence-next" src="images/bt-next.png" alt="Next Frame" />
-        <div class="col-md-12">
+        <div class="col-md-12" id="sequence">
+          <img class="sequence-prev" src="images/bt-prev.png" alt="Previous Frame" />
+          <img class="sequence-next" src="images/bt-next.png" alt="Next Frame" />
+
           <ul class="sequence-canvas">
             <% for upload in @uploads %>
             <li class="animate-in">
@@ -23,7 +22,6 @@
               <li><%= image_tag upload.image_url(:thumb) if upload.image? %></li>
               <% end %>
             </ul>
-          </div>
         </div>
       </div>
     </div>
