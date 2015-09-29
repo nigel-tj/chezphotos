@@ -1,24 +1,31 @@
-<div class="sequence-theme">
-  <div id="sequence">
-    
-    <img class="sequence-prev" src="images/bt-prev.png" alt="Previous Frame" />
-    <img class="sequence-next" src="images/bt-next.png" alt="Next Frame" />
-    
-    <ul class="sequence-canvas">
-      <% for upload in @uploads %>
-        <li class="animate-in">
-	  <h2 class="title"> <%= upload.title %></h2>
-	  <h3 class="subtitle"><%= upload.caption %></h3>
-	  <%= image_tag upload.image_url if upload.image? %>
-        </li>
-      <% end %>
-    </ul>
-    
-    <!-- <ul class="sequence-pagination"> -->
-    <!--   <% for upload in @uploads %> -->
-    <!--     <li><%= image_tag upload.image_url(:thumb) if upload.image? %></li> -->
-    <!--   <% end %> -->
-    <!-- </ul> -->
-    
+<div class="container">
+  <div class="row">
+    <div class="sequence-theme">
+      <div id="sequence">
+        
+        <img class="sequence-prev" src="images/bt-prev.png" alt="Previous Frame" />
+        <img class="sequence-next" src="images/bt-next.png" alt="Next Frame" />
+        <div class="col-md-12">
+          <ul class="sequence-canvas">
+            <% for upload in @uploads %>
+            <li class="animate-in">
+	      <%= image_tag upload.image_url if upload.image? %>
+              <div class="col-md-4">
+	        <h2 class="title"> <%= upload.title %></h2>
+	        <h3 class="subtitle"><%= upload.caption %></h3>
+              </div>
+            </li>
+            <% end %>
+          </ul>
+          <div class="col-md-12">
+            <ul class="sequence-pagination">
+              <% for upload in @uploads %>
+              <li><%= image_tag upload.image_url(:thumb) if upload.image? %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

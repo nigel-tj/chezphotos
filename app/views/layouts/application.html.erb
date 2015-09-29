@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= csrf_meta_tags %>
     <title>ChezPhotosC</title>
-    <link rel="stylesheet" media="screen" href="css/sequencejs-theme.modern-slide-in.css" />
+    <link rel="stylesheet" media="screen" href="/css/bootstrap.css" />
+    <link rel="stylesheet" media="screen" href="/css/sequencejs-theme.modern-slide-in.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ruluko|Sirin+Stencil">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/scripts/bootstrap.min.js"></script>
     <script>
       if (typeof jQuery == 'undefined'){
       document.write(unescape('%3Cscript src="scripts/jquery-min.js" %3E%3C/script%3E'));
@@ -21,9 +20,10 @@
     <script src="sequencejs-options.modern-slide-in.js"></script>
   </head>
 
-  <%= render partial: "home/navbar" %>
+  
   
   <body>
+    <%= render partial: "home/navbar" %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
